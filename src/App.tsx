@@ -1,22 +1,21 @@
-import { useState } from "react";
-import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./pages/home";
-import AccordianPage from "./pages/accordian-page";
+import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './pages/home'
+import AccordionPage from './pages/accordion-page'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "/accordian",
-    element: <AccordianPage />,
+    path: '/accordion',
+    element: <AccordionPage />,
   },
-]);
+])
 
 const App = () => {
-  return <RouterProvider router={router} />;
-};
+  return <RouterProvider router={router} />
+}
 
-export default App;
+export default App
