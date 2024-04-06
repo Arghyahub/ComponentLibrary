@@ -23,7 +23,7 @@ interface Props {
 }
 
 // Default styles edit here
-const defaultComponentTwStyles = 'max-w-[95%]'
+const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
 const defaultCancelTwStyles = 'mt-0'
 const defaultPrimaryTwStyles = ''
@@ -73,7 +73,10 @@ const ReModal = ({
               Cancel
             </AlertDialogCancel>
           )}
-          <AlertDialogAction onClick={handlePrimaryAction}>
+          <AlertDialogAction
+            className={cn(defaultPrimaryTwStyles)}
+            onClick={handlePrimaryAction}
+          >
             {primaryBtnText}
           </AlertDialogAction>
         </AlertDialogFooter>
