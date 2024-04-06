@@ -9,6 +9,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
+import { cn } from '@/lib/utils'
 interface Props {
   open: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -20,6 +21,14 @@ interface Props {
   noCancel?: boolean
   autoClose?: boolean
 }
+
+// Default styles edit here
+const defaultComponentTwStyles = 'max-w-[95%]'
+const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
+const defaultCancelTwStyles = 'mt-0'
+const defaultPrimaryTwStyles = ''
+const defaultTitleTwStyles = 'text-start'
+const defaultContentTwStyles = 'text-start'
 
 const ReModal = ({
   open = false,
@@ -46,14 +55,23 @@ const ReModal = ({
       {/* <AlertDialogTrigger asChild>
         <button>{button}</button>
       </AlertDialogTrigger> */}
-      <AlertDialogContent>
+      <AlertDialogContent className={cn(defaultComponentTwStyles)}>
         <AlertDialogHeader>
-          <AlertDialogTitle>{title}</AlertDialogTitle>
-          <AlertDialogDescription>{content}</AlertDialogDescription>
+          <AlertDialogTitle className={cn(defaultTitleTwStyles)}>
+            {title}
+          </AlertDialogTitle>
+          <AlertDialogDescription className={cn(defaultContentTwStyles)}>
+            {content}
+          </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter>
+        <AlertDialogFooter className={cn(defaultFooterTwStyles)}>
           {!noCancel && (
-            <AlertDialogCancel onClick={handleClose}>Cancel</AlertDialogCancel>
+            <AlertDialogCancel
+              onClick={handleClose}
+              className={cn(defaultCancelTwStyles)}
+            >
+              Cancel
+            </AlertDialogCancel>
           )}
           <AlertDialogAction onClick={handlePrimaryAction}>
             {primaryBtnText}
