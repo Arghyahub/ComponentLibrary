@@ -1,5 +1,7 @@
 import ReAccordion from '@/components/reusables/re-accordion'
 import { useState } from 'react'
+import { ArrowLeftFromLine } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 interface TypeData {
   button: string
@@ -8,9 +10,8 @@ interface TypeData {
 
 const inputTwStyles = 'px-2 py-1 rounded-md bg-white text-black'
 
-const testingTwStyles = 'bg-gray-100'
-
 const AccordionPage = () => {
+  const navigate = useNavigate()
   const [data, setData] = useState<TypeData[]>([
     { button: 'Button 1', content: 'Dummy content' },
   ])
@@ -32,7 +33,14 @@ const AccordionPage = () => {
 
   return (
     <div className="w-screen h-screen overflow-auto flex flex-col bg-[#282828] text-white px-4 pt-8 pb-10  gap-3">
-      <h1 className="text-3xl underline text-bold mb-6 text-cyan-300">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex flex-row items-center gap-1 text-blue-400"
+      >
+        <ArrowLeftFromLine height={16} width={16} />
+        back
+      </button>
+      <h1 className="text-3xl underline underline-offset-4 text-bold mb-6 flex flex-row items-center gap-2">
         Accordion
       </h1>
       <h1 className="text-2xl font-semibold">Configure styles</h1>
