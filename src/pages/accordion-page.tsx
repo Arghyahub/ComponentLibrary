@@ -32,7 +32,7 @@ const AccordionPage = () => {
   }
 
   return (
-    <div className="w-screen h-screen overflow-auto flex flex-col bg-[#282828] text-white px-4 pt-8 pb-10  gap-3">
+    <div className="flex flex-col gap-3 bg-[#282828] px-4 pt-8 pb-10 w-screen h-screen text-white overflow-auto">
       <button
         onClick={() => navigate(-1)}
         className="flex flex-row items-center gap-1 text-blue-400"
@@ -40,11 +40,11 @@ const AccordionPage = () => {
         <ArrowLeftFromLine height={16} width={16} />
         back
       </button>
-      <h1 className="text-3xl underline underline-offset-4 text-bold mb-6 flex flex-row items-center gap-2">
+      <h1 className="flex flex-row items-center gap-2 mb-6 text-3xl text-bold underline underline-offset-4">
         Accordion
       </h1>
-      <h1 className="text-2xl font-semibold">Configure styles</h1>
-      <div className="flex flex-row gap-4 mt-2 flex-wrap">
+      <h1 className="font-semibold text-2xl">Configure styles</h1>
+      <div className="flex flex-row flex-wrap gap-4 mt-2">
         <div className="flex flex-row gap-2">
           <label htmlFor="cmpstyl">Component Style:</label>
           <textarea
@@ -73,9 +73,9 @@ const AccordionPage = () => {
           />
         </div>
       </div>
-      <h1 className="text-2xl font-semibold mt-5">Configure content here</h1>
+      <h1 className="mt-5 font-semibold text-2xl">Configure content here</h1>
       {data.map((item, idx) => (
-        <div key={idx} className="flex flex-row gap-4 items-center flex-wrap">
+        <div key={idx} className="flex flex-row flex-wrap items-center gap-4">
           <div className="flex flex-row gap-2">
             <label htmlFor="btn">Button</label>
             <input
@@ -101,15 +101,15 @@ const AccordionPage = () => {
               onClick={() =>
                 setData((prev) => [...prev, { button: '', content: '' }])
               }
-              className="py-1 px-3 bg-blue-500 rounded-md flex text-white"
+              className="flex bg-blue-500 px-3 py-1 rounded-md text-white"
             >
               Add
             </button>
           )}
         </div>
       ))}
-      <div className="mt-4 flex flex-row gap-4">
-        <h1 className="text-2xl font-semibold">Result:</h1>
+      <div className="flex flex-row gap-4 mt-4">
+        <h1 className="font-semibold text-2xl">Result:</h1>
         <div className="flex flex-row">
           <button
             onClick={() => setbehaviour('single')}
@@ -139,22 +139,22 @@ const AccordionPage = () => {
         behaviour={behaviour}
       />
       <div className="flex flex-col mt-4">
-        <h1 className="text-2xl font-semibold">Usage:</h1>
+        <h1 className="font-semibold text-2xl">Usage:</h1>
         <p>
           You only have to pass{' '}
-          <code className="bg-gray-600 py-1 px-2 rounded-sm">{`[{button: '${data[0].button}', content: '${data[0].content}'}, {...}]`}</code>
+          <code className="bg-gray-600 px-2 py-1 rounded-sm">{`[{button: '${data[0].button}', content: '${data[0].content}'}, {...}]`}</code>
         </p>
         <p>And it will generate all the accordions for you</p>
         <p className="mt-2">You can also pass props to style the accordion</p>
-        <p className="flex flex-row gap-2 mt-1">
+        <p className="flex flex-row flex-wrap gap-2 mt-1 break-words">
           Like:{' '}
-          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+          <code className="bg-gray-600 px-2 py-1 rounded-sm">
             componentTwStyles
           </code>
-          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+          <code className="bg-gray-600 px-2 py-1 rounded-sm">
             buttonTwStyles
           </code>
-          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+          <code className="bg-gray-600 px-2 py-1 rounded-sm">
             contentTwStyles
           </code>
         </p>
