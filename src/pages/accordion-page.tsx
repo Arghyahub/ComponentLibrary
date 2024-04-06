@@ -130,6 +130,27 @@ const AccordionPage = () => {
         componentTwStyles={componentTwStyles}
         behaviour={behaviour}
       />
+      <div className="flex flex-col mt-4">
+        <h1 className="text-2xl font-semibold">Usage:</h1>
+        <p>
+          You only have to pass{' '}
+          <code className="bg-gray-600 py-1 px-2 rounded-sm">{`[{button: '${data[0].button}', content: '${data[0].content}'}, {...}]`}</code>
+        </p>
+        <p>And it will generate all the accordions for you</p>
+        <p className="mt-2">You can also pass props to style the accordion</p>
+        <p className="flex flex-row gap-2 mt-1">
+          Like:{' '}
+          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+            componentTwStyles
+          </code>
+          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+            buttonTwStyles
+          </code>
+          <code className="bg-gray-600 py-1 px-2 rounded-sm">
+            contentTwStyles
+          </code>
+        </p>
+      </div>
     </div>
   )
 }
