@@ -26,8 +26,10 @@ interface Props {
 const defaultComponentTwStyles =
   'max-w-[95%] sm:max-w-lg dark:bg-white rounded-sm'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
-const defaultCancelTwStyles = 'mt-0 dark:bg-white dark:ring-offset-white'
-const defaultPrimaryTwStyles = 'dark:bg-[#0f172A] dark:text-[#F8FAFC]'
+const defaultCancelTwStyles =
+  'mt-0 dark:bg-white dark:ring-offset-white dark:hover:bg-[#F1F1F5]'
+const defaultPrimaryTwStyles =
+  'dark:bg-slate-900 dark:text-[#F8FAFC] dark:hover:bg-[#0F172AE6]'
 const defaultTitleTwStyles = 'text-start'
 const defaultContentTwStyles = 'text-start dark:text-[#64748B]'
 
