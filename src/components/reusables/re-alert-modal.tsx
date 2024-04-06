@@ -25,10 +25,10 @@ interface Props {
 // Default styles edit here
 const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg dark:bg-white'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
-const defaultCancelTwStyles = 'mt-0'
-const defaultPrimaryTwStyles = ''
+const defaultCancelTwStyles = 'mt-0 dark:bg-white'
+const defaultPrimaryTwStyles = 'dark:bg-[#0f172A]'
 const defaultTitleTwStyles = 'text-start'
-const defaultContentTwStyles = 'text-start'
+const defaultContentTwStyles = 'text-start dark:text-[#64748B]'
 
 const ReModal = ({
   open = false,
