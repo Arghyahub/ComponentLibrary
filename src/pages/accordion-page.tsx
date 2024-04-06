@@ -43,7 +43,6 @@ const AccordionPage = () => {
             onChange={(e) => setComponentTwStyles(e.target.value)}
             value={componentTwStyles}
             name="cmpstyl"
-            disabled
             className={`${inputTwStyles}`}
           />
         </div>
@@ -53,7 +52,6 @@ const AccordionPage = () => {
             onChange={(e) => setButtonTwStyles(e.target.value)}
             value={buttonTwStyles}
             name="btnstyl"
-            disabled
             className={`${inputTwStyles}`}
           />
         </div>
@@ -63,7 +61,6 @@ const AccordionPage = () => {
             onChange={(e) => setContentTwStyles(e.target.value)}
             value={contentTwStyles}
             name="cntstyl"
-            disabled
             className={`${inputTwStyles}`}
           />
         </div>
