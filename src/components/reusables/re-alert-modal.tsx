@@ -23,9 +23,10 @@ interface Props {
 }
 
 // Default styles edit here
-const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg dark:bg-white'
+const defaultComponentTwStyles =
+  'max-w-[95%] sm:max-w-lg dark:bg-white rounded-sm'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
-const defaultCancelTwStyles = 'mt-0 dark:bg-white'
+const defaultCancelTwStyles = 'mt-0 dark:bg-white dark:ring-offset-white'
 const defaultPrimaryTwStyles = 'dark:bg-[#0f172A] dark:text-[#F8FAFC]'
 const defaultTitleTwStyles = 'text-start'
 const defaultContentTwStyles = 'text-start dark:text-[#64748B]'
