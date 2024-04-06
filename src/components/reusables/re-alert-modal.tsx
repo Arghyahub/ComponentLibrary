@@ -23,7 +23,7 @@ interface Props {
 }
 
 // Default styles edit here
-const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg'
+const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg dark:bg-white'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
 const defaultCancelTwStyles = 'mt-0'
 const defaultPrimaryTwStyles = ''
