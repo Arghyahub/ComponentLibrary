@@ -20,10 +20,16 @@ interface Props {
   cancelBtnAction?: () => void
   noCancel?: boolean
   autoClose?: boolean
+  ComponentTwStyles?: string
+  FooterTwStyles?: string
+  CancelTwStyles?: string
+  PrimaryTwStyles?: string
+  TitleTwStyles?: string
+  ContentTwStyles?: string
 }
 
 // Default styles edit here
-const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg rounded-sm .light'
+const defaultComponentTwStyles = 'max-w-[90%] sm:max-w-lg rounded-sm .light'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
 const defaultCancelTwStyles = 'text-black mt-0'
 const defaultPrimaryTwStyles = ''
@@ -35,11 +41,17 @@ const ReModal = ({
   setOpen,
   title = '',
   content = '',
-  primaryBtnText = '',
+  primaryBtnText = 'Continue',
   primaryBtnAction,
   cancelBtnAction,
   noCancel = false,
   autoClose = true,
+  ComponentTwStyles = '',
+  FooterTwStyles = '',
+  CancelTwStyles = '',
+  PrimaryTwStyles = '',
+  TitleTwStyles = '',
+  ContentTwStyles = '',
 }: Props) => {
   const handleClose = () => {
     if (cancelBtnAction) cancelBtnAction()
@@ -55,26 +67,32 @@ const ReModal = ({
       {/* <AlertDialogTrigger asChild>
         <button>{button}</button>
       </AlertDialogTrigger> */}
-      <AlertDialogContent className={cn(defaultComponentTwStyles)}>
+      <AlertDialogContent
+        className={cn(defaultComponentTwStyles, ComponentTwStyles)}
+      >
         <AlertDialogHeader>
-          <AlertDialogTitle className={cn(defaultTitleTwStyles)}>
+          <AlertDialogTitle className={cn(defaultTitleTwStyles, TitleTwStyles)}>
             {title}
           </AlertDialogTitle>
-          <AlertDialogDescription className={cn(defaultContentTwStyles)}>
+          <AlertDialogDescription
+            className={cn(defaultContentTwStyles, ContentTwStyles)}
+          >
             {content}
           </AlertDialogDescription>
         </AlertDialogHeader>
-        <AlertDialogFooter className={cn(defaultFooterTwStyles)}>
+        <AlertDialogFooter
+          className={cn(defaultFooterTwStyles, FooterTwStyles)}
+        >
           {!noCancel && (
             <AlertDialogCancel
               onClick={handleClose}
-              className={cn(defaultCancelTwStyles)}
+              className={cn(defaultCancelTwStyles, CancelTwStyles)}
             >
               Cancel
             </AlertDialogCancel>
           )}
           <AlertDialogAction
-            className={cn(defaultPrimaryTwStyles)}
+            className={cn(defaultPrimaryTwStyles, PrimaryTwStyles)}
             onClick={handlePrimaryAction}
           >
             {primaryBtnText}
