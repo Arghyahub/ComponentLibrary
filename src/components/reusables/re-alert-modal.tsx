@@ -23,15 +23,12 @@ interface Props {
 }
 
 // Default styles edit here
-const defaultComponentTwStyles =
-  'max-w-[95%] sm:max-w-lg dark:bg-white rounded-sm .light'
+const defaultComponentTwStyles = 'max-w-[95%] sm:max-w-lg rounded-sm .light'
 const defaultFooterTwStyles = 'flex flex-row gap-2 justify-end items-center'
-const defaultCancelTwStyles =
-  'text-black dark:hover:text-black dark:text-black mt-0 dark:bg-white dark:ring-offset-white dark:hover:bg-[#F1F1F5] dark:border-slate-200'
-const defaultPrimaryTwStyles =
-  'dark:bg-slate-900 dark:text-[#F8FAFC] dark:hover:bg-[#0F172AE6]'
+const defaultCancelTwStyles = 'text-black mt-0'
+const defaultPrimaryTwStyles = ''
 const defaultTitleTwStyles = 'text-start'
-const defaultContentTwStyles = 'text-start dark:text-[#64748B]'
+const defaultContentTwStyles = 'text-start'
 
 const ReModal = ({
   open = false,
